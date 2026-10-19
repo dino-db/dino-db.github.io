@@ -57,3 +57,17 @@ body.arcade-open{overflow:hidden}
 .arcade-embedded .arcade-dir{font-size:18px;border-radius:8px;background:#1c2a50}
 .arcade-embedded .arcade-help{font-size:10px;margin:8px 0 0;line-height:1.5}
 @media(max-width:420px){.arcade-embedded .arcade-panel{padding:11px}.arcade-embedded{padding:12px 8px!important}}
+
+.arcade-visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Compact arcade v4: score on a single line, no cards or heading */
+.arcade-embedded .arcade-head{display:none!important}
+.arcade-embedded .arcade-panel{width:min(100%,350px)!important;padding:10px!important;border-radius:12px!important}
+.arcade-embedded .arcade-stats{display:flex!important;justify-content:flex-end!important;gap:15px!important;margin:0 0 7px!important}
+.arcade-embedded .arcade-stat{flex:0 0 auto!important;display:flex!important;gap:5px!important;border:0!important;background:transparent!important;padding:0!important;border-radius:0!important}
+.arcade-embedded .arcade-stat span{font-size:11px!important;color:#aeb9d4!important}
+.arcade-embedded .arcade-stat strong{font-size:12px!important;color:#fff!important}
+.arcade-embedded .arcade-controls{margin:8px 0!important}
+.arcade-embedded .arcade-action{padding:6px 11px!important;font-size:11px!important}
+.arcade-embedded .arcade-pad{grid-template-columns:repeat(3,38px)!important;grid-template-rows:repeat(2,31px)!important}
+.arcade-embedded .arcade-help{font-size:10px!important}

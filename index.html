@@ -44,7 +44,7 @@
     "Virtual Product Development"
   ]
 }</script>
-<link href="snake.css" rel="stylesheet"/></head>
+<link href="snake.css?v=4" rel="stylesheet"/></head>
 <body>
 <div aria-hidden="true" class="glow">
 </div>
@@ -111,8 +111,8 @@
      Scroll to explore ↓
     </div>
 </section><div class="arcade-embedded" id="arcade-overlay">
-<section aria-labelledby="arcade-title" aria-modal="true" class="arcade-panel" role="dialog">
-<div class="arcade-head"><div><h2 id="arcade-title">Snake</h2></div>
+<section aria-labelledby="arcade-title" class="arcade-panel" role="region">
+<div class="arcade-head"><div><h2 id="arcade-title" class="arcade-visually-hidden">Snake game</h2></div>
 </div>
 <div class="arcade-stats"><div class="arcade-stat"><span>Score</span><strong id="arcade-score">0</strong></div>
 <div class="arcade-stat"><span>Best</span><strong id="arcade-best">0</strong></div></div>
@@ -336,5 +336,5 @@
       document.addEventListener('pointermove', e => { document.documentElement.style.setProperty('--x', e.clientX + 'px'); document.documentElement.style.setProperty('--y', e.clientY + 'px'); }, {passive:true});
     }
   </script>
-<script defer="True" src="snake.js"></script></body>
+<script defer="True" src="snake.js?v=4"></script></body>
 </html>
