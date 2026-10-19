@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#0b1020" name="theme-color"/>
+  <meta content="Placido Di Blasi &mdash; Engineer and Lead Software Engineer specializing in Python, computational geometry, software engineering and AI-assisted development." name="description"/>
+  <meta content="Placido Di Blasi" name="author"/>
+  <meta content="Placido Di Blasi | Engineer &amp; Lead Software Engineer" property="og:title"/>
+  <meta content="Building software at the intersection of engineering, geometry and AI." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <title>
+   Placido Di Blasi | Engineer &amp; Lead Software Engineer
+  </title>
+  <style>
+   :root{color-scheme:dark;--bg:#0b1020;--text:#f2f5ff;--muted:#a7b0c7;--line:#ffffff1b;--accent:#86b6ff;--card:#ffffff0a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 80% 15%,#345fa74a,transparent 35%),radial-gradient(circle at 12% 60%,#4b3e9340,transparent 36%);pointer-events:none}
+    .glow{position:fixed;width:420px;height:420px;left:var(--x,60%);top:var(--y,30%);transform:translate(-50%,-50%);background:radial-gradient(circle,#7aabff16,transparent 68%);pointer-events:none;z-index:-1}
+    a{color:inherit;text-decoration:none}.container{width:min(1100px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:5;backdrop-filter:blur(20px);background:#0b1020b8;border-bottom:1px solid var(--line)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:1.12rem;font-weight:750;letter-spacing:-.04em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:28px;color:var(--muted);font-size:.92rem}.navlinks a:hover,.text-link:hover{color:var(--accent)}
+    .hero{min-height:calc(100svh - 74px);display:flex;align-items:center;padding:100px 0 115px;position:relative}.hero-content{max-width:800px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#c0d6ff;font-size:.86rem;letter-spacing:.13em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:#8fe2c2;box-shadow:0 0 16px #8fe2c2}h1{font-size:clamp(3.7rem,9vw,7.4rem);line-height:1.02;letter-spacing:-.075em;margin:22px 0 26px;font-weight:780}h1 span{background:linear-gradient(100deg,#f5f7ff 10%,#9bbdff 75%,#a2e8e1);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{font-size:clamp(1.12rem,2vw,1.35rem);color:var(--muted);max-width:620px;margin:0 0 34px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:13px 19px;font-weight:650;border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s}.btn:hover{transform:translateY(-3px);border-color:#a5c7ff}.btn.primary{background:#c3d8ff;color:#0c1831;border-color:transparent}.btn.primary:hover{background:#e0ebff}.scroll-note{position:absolute;bottom:45px;color:#7d8ba7;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+    section{padding:85px 0;scroll-margin-top:80px}.section-heading{display:flex;align-items:center;gap:16px;margin-bottom:32px}.section-heading h2{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.045em;margin:0}.section-heading::after{content:"";height:1px;flex:1;background:var(--line)}.about{font-size:1.15rem;color:var(--muted);max-width:780px}.about strong{color:var(--text);font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:27px;border:1px solid var(--line);background:var(--card);border-radius:18px;transition:transform .25s,border-color .25s,background .25s}.card:hover{transform:translateY(-6px);border-color:#86b6ff66;background:#ffffff10}.card .symbol{font-size:1.5rem;color:var(--accent);margin-bottom:20px}.card h3{margin:0 0 9px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.95rem}.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.tag{border:1px solid var(--line);background:#ffffff08;color:#cbd5ec;border-radius:999px;padding:7px 13px;font-size:.86rem}
+    .timeline{position:relative;margin:10px 0 0 8px;padding-left:30px;border-left:1px solid #86b6ff55}.timeline-item{position:relative;padding:0 0 34px}.timeline-item:last-child{padding-bottom:0}.timeline-item::before{content:"";position:absolute;left:-37px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px #86b6ff77}.meta{color:var(--accent);font-size:.85rem;font-weight:650;letter-spacing:.04em}.timeline h3{margin:7px 0 3px;font-size:1.2rem}.timeline p{margin:0;color:var(--muted);max-width:740px}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.project-card{display:flex;flex-direction:column;gap:13px;min-height:220px}.project-card h3{font-size:1.2rem;margin:0}.project-card p{flex:1}.project-link{color:#c0d6ff;font-weight:650;font-size:.9rem}.project-link:hover{color:white}.section-intro{color:var(--muted);max-width:690px;margin:-8px 0 25px}.contact{padding-bottom:115px}.contact p{color:var(--muted);font-size:1.1rem;max-width:600px}.text-link{color:#c0d6ff;font-weight:600}footer{border-top:1px solid var(--line);padding:24px 0;color:#8996b2;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:750px){.navlinks{gap:14px;font-size:.83rem}.hero{padding:90px 0 110px;min-height:80svh}.grid,.project-grid{grid-template-columns:1fr}.navlinks{gap:11px;flex-wrap:wrap;justify-content:flex-end}.brand{font-size:.94rem}nav{height:auto;min-height:74px;padding:12px 0}section{padding:62px 0}.card{padding:23px}.scroll-note{bottom:28px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}.glow{display:none}}
+  </style>
+ </head>
+ <body>
+  <div aria-hidden="true" class="glow">
+  </div>
+  <header>
+   <nav aria-label="Main navigation" class="container">
+    <a class="brand" href="#home">
+     Placido Di Blasi
+     <span>
+      .
+     </span>
+    </a>
+    <div class="navlinks">
+     <a href="#about">
+      About
+     </a>
+     <a href="#expertise">
+      Expertise
+     </a>
+     <a href="#experience">
+      Experience
+     </a>
+     <a href="#projects">
+      Projects
+     </a>
+     <a href="#contact">
+      Contact
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section class="hero container" id="home">
+    <div class="hero-content reveal">
+     <div class="eyebrow">
+      <span class="dot">
+      </span>
+      Engineer &middot; Lead Software Engineer
+     </div>
+     <h1>
+      Hi, I'm
+      <span>
+       Placido Di Blasi.
+      </span>
+     </h1>
+     <p class="lead">
+      I build thoughtful software at the intersection of engineering, computational geometry and artificial intelligence.
+     </p>
+     <div class="actions">
+      <a class="btn primary" href="#projects">
+       Explore my work
+       <span aria-hidden="true">
+        &nearrow;
+       </span>
+      </a>
+      <a class="btn" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">
+       GitHub
+       <span aria-hidden="true">
+        &nearrow;
+       </span>
+      </a>
+     </div>
+    </div>
+    <div class="scroll-note">
+     Scroll to explore &darr;
+    </div>
+   </section>
+   <section class="container reveal" id="about">
+    <div class="section-heading">
+     <h2>
+      About me
+     </h2>
+    </div>
+    <p class="about">
+     I'm
+     <strong>
+      Placido Di Blasi
+     </strong>
+     , an engineer and Lead Software Engineer with a background in
+     <strong>
+      Space and Astronautical Engineering
+     </strong>
+     . I work on complex software challenges, combining
+     <strong>
+      Python, geometry, simulation and modern development practices
+     </strong>
+     to turn technical ideas into reliable solutions.
+    </p>
+   </section>
+   <section class="container reveal" id="expertise">
+    <div class="section-heading">
+     <h2>
+      What I do
+     </h2>
+    </div>
+    <div class="grid">
+     <article class="card">
+      <div aria-hidden="true" class="symbol">
+       ⌘
+      </div>
+      <h3>
+       Software Engineering
+      </h3>
+      <p>
+       Designing and developing maintainable applications, tools and engineering workflows.
+      </p>
+     </article>
+     <article class="card">
+      <div aria-hidden="true" class="symbol">
+       ◇
+      </div>
+      <h3>
+       Computational Geometry
+      </h3>
+      <p>
+       Solving geometric and numerical problems for complex engineering applications.
+      </p>
+     </article>
+     <article class="card">
+      <div aria-hidden="true" class="symbol">
+       ✳
+      </div>
+      <h3>
+       AI-Assisted Development
+      </h3>
+      <p>
+       Exploring intelligent tools and workflows to improve software development.
+      </p>
+     </article>
+    </div>
+    <div aria-label="Skills" class="tags">
+     <span class="tag">
+      Python
+     </span>
+     <span class="tag">
+      JavaScript
+     </span>
+     <span class="tag">
+      React
+     </span>
+     <span class="tag">
+      Computational Geometry
+     </span>
+     <span class="tag">
+      CAD / CAE
+     </span>
+     <span class="tag">
+      AI Tools
+     </span>
+    </div>
+   </section>
+   <section class="container reveal" id="experience">
+    <div class="section-heading">
+     <h2>
+      Experience &amp; education
+     </h2>
+    </div>
+    <div class="timeline">
+     <article class="timeline-item">
+      <div class="meta">
+       2020 &mdash; Present &middot; Bridgestone EMIA
+      </div>
+      <h3>
+       Lead Software Engineer
+      </h3>
+      <p>
+       Engineering software, computational geometry and virtual product development. Building tools that connect complex engineering requirements with practical software solutions.
+      </p>
+     </article>
+     <article class="timeline-item">
+      <div class="meta">
+       Sapienza University of Rome
+      </div>
+      <h3>
+       MSc &middot; Space and Astronautical Engineering
+      </h3>
+      <p>
+       An engineering foundation in numerical methods, complex systems and analytical problem-solving.
+      </p>
+     </article>
+     <article class="timeline-item">
+      <div class="meta">
+       Continuing education
+      </div>
+      <h3>
+       Stanford &amp; HKUST
+      </h3>
+      <p>
+       Specializations in Algorithms (Stanford) and Software Engineering (HKUST).
+      </p>
+     </article>
+    </div>
+   </section>
+   <section class="container reveal" id="projects">
+    <div class="section-heading">
+     <h2>
+      Selected work
+     </h2>
+    </div>
+    <p class="section-intro">
+     A look at my public development work and the areas I focus on. Explore GitHub for current repositories and updates.
+    </p>
+    <div class="project-grid">
+     <article class="card project-card">
+      <div aria-hidden="true" class="symbol">
+       &lt;/&gt;
+      </div>
+      <h3>
+       Open-source projects
+      </h3>
+      <p>
+       Code, experiments and developer tooling shared through my public GitHub profile.
+      </p>
+      <a class="project-link" href="https://github.com/dino-db?tab=repositories" rel="noopener noreferrer" target="_blank">
+       Browse repositories &nearrow;
+      </a>
+     </article>
+     <article class="card project-card">
+      <div aria-hidden="true" class="symbol">
+       ✦
+      </div>
+      <h3>
+       Engineering &amp; AI
+      </h3>
+      <p>
+       My areas of interest include computational geometry, engineering applications and AI-assisted development workflows.
+      </p>
+      <a class="project-link" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">
+       Explore GitHub &nearrow;
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="container contact reveal" id="contact">
+    <div class="section-heading">
+     <h2>
+      Let's connect
+     </h2>
+    </div>
+    <p>
+     Interested in software engineering, technical challenges or collaboration? Explore my work and get in touch through GitHub.
+    </p>
+    <a class="btn primary" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">
+     Visit my GitHub &nearrow;
+    </a>
+   </section>
+  </main>
+  <footer>
+   <div class="container foot">
+    <span>
+     &copy;
+     <span id="year">
+      2026
+     </span>
+     Placido Di Blasi
+    </span>
+    <span>
+     Engineered with curiosity.
+    </span>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('year').textContent = new Date().getFullYear();
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, {threshold: .08});
+      items.forEach(item => observer.observe(item));
+    } else { items.forEach(item => item.classList.add('visible')); }
+    if (window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches) {
+      document.addEventListener('pointermove', e => { document.documentElement.style.setProperty('--x', e.clientX + 'px'); document.documentElement.style.setProperty('--y', e.clientY + 'px'); }, {passive:true});
+    }
+  </script>
+ </body>
+</html>
