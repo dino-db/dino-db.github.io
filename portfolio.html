@@ -34,6 +34,45 @@
 .pdb-labs-card h3{font-size:1.7rem;margin:0 0 8px}.pdb-labs-card p{color:#bfc9e5;line-height:1.7}
 .pdb-labs-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 @media(max-width:650px){.pdb-labs-card{grid-template-columns:1fr}.pdb-labs-logo{max-width:180px}}
+
+
+/* PDB Labs: responsive feature section */
+#pdb-labs { padding-top: 70px; padding-bottom: 70px; }
+.pdb-labs-card {
+  display:grid; grid-template-columns:minmax(0,240px) minmax(0,1fr);
+  gap:clamp(22px,4vw,52px); align-items:center; padding:clamp(22px,4vw,42px);
+  border:1px solid #5369c477; border-radius:24px;
+  background:linear-gradient(120deg,#0e1b39 0%,#111731 55%,#21153d 100%);
+  box-shadow:0 22px 65px #0004; overflow:hidden;
+}
+.pdb-labs-logo-wrap { width:100%; max-width:240px; aspect-ratio:1; display:grid;place-items:center; }
+.pdb-labs-logo { display:block; width:100%; height:100%; object-fit:contain; border-radius:50%; }
+.pdb-labs-content { min-width:0; }
+.pdb-labs-eyebrow { color:#8b9cff; font-size:.78rem; font-weight:750; letter-spacing:.2em; margin-bottom:7px; }
+.pdb-labs-card h3 { font-size:clamp(1.65rem,3.5vw,2.45rem); letter-spacing:-.04em; line-height:1.18; margin:0 0 15px; }
+.pdb-labs-card p { font-size:clamp(.98rem,1.5vw,1.12rem); line-height:1.65; color:#bfc9e5; margin:0; max-width:670px; }
+.pdb-labs-topics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin-top:24px; }
+.pdb-labs-topic { text-align:center; padding:10px 9px; color:#cdd7f4; font-size:.75rem; line-height:1.35; border-right:1px solid #8290de38; }
+.pdb-labs-topic:last-child { border-right:0; }
+.pdb-labs-topic span { display:block; font-size:1.5rem; color:#779cff; margin-bottom:7px; }
+.pdb-labs-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
+.pdb-labs-actions a { display:inline-flex; justify-content:center; align-items:center; gap:9px; padding:12px 17px; border-radius:12px; font-weight:700; border:1px solid #747cdb88; transition:transform .2s,border-color .2s; }
+.pdb-labs-actions a:hover { transform:translateY(-2px); border-color:#bba4ff; }
+.pdb-labs-actions .pdb-instagram { background:linear-gradient(105deg,#086cf4,#8c28e9); color:white; border-color:transparent; }
+.pdb-labs-actions .pdb-tiktok { background:#10162b; color:white; }
+@media(max-width:760px) {
+  .pdb-labs-card { grid-template-columns:minmax(0,1fr); gap:18px; padding:22px; }
+  .pdb-labs-logo-wrap { width:min(54%,190px); margin:0 auto; }
+  .pdb-labs-content { text-align:left; }
+  .pdb-labs-topics { grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:12px; }
+  .pdb-labs-topic:nth-child(2) { border-right:0; }
+  .pdb-labs-actions a { flex:1; min-width:125px; }
+}
+@media(max-width:390px) {
+  .pdb-labs-card { padding:18px; }
+  .pdb-labs-actions { flex-direction:column; }
+  .pdb-labs-actions a { width:100%; }
+}
 </style><meta content="Placido Di Blasi is an engineer and software engineer specializing in Python, computational geometry, CAD/CAE, virtual product development and AI-assisted software engineering." name="description"/><meta content="Placido Di Blasi" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="profile" property="og:type"/><meta content="Placido Di Blasi" property="og:site_name"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" property="og:title"/><meta content="Engineering, software development, computational geometry and AI. Explore the professional portfolio of Placido Di Blasi." property="og:description"/><meta content="https://placidodiblasi-engineer.dev/" property="og:url"/><meta content="Placido" property="profile:first_name"/><meta content="Di Blasi" property="profile:last_name"/><meta content="summary" name="twitter:card"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" name="twitter:title"/><meta content="Engineering, computational geometry, software development and AI." name="twitter:description"/><link href="https://placidodiblasi-engineer.dev/" rel="canonical"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Person",
@@ -301,16 +340,29 @@
 </article>
 </div>
 </section>
-<section class="container reveal" id="pdb-labs" aria-labelledby="pdb-labs-title">
+<section aria-labelledby="pdb-labs-title" class="container reveal" id="pdb-labs">
 <div class="section-heading"><h2 id="pdb-labs-title">PDB Labs</h2></div>
 <div class="pdb-labs-card">
-<img class="pdb-labs-logo" src="pdb-labs-logo.png" alt="PDB Labs — Engineering the Future" loading="lazy" width="512" height="512">
-<div><h3>Engineering the Future</h3>
-<p>PDB Labs is my technology content project, exploring artificial intelligence, software engineering, coding, algorithms and computational geometry. Follow along for ideas, insights and engineering-focused content.</p>
+<div class="pdb-labs-logo-wrap">
+<img alt="PDB Labs — Engineering the Future" class="pdb-labs-logo" height="1024" loading="lazy" src="pdb-labs-logo.png" width="1024"/>
+</div>
+<div class="pdb-labs-content">
+<div class="pdb-labs-eyebrow">PDB LABS</div>
+<h3>Engineering the Future</h3>
+<p>Explore AI, coding, algorithms and emerging technologies through short-form content and engineering insights.</p>
+<div aria-label="PDB Labs topics" class="pdb-labs-topics">
+<div class="pdb-labs-topic"><span aria-hidden="true">⌘</span>Software<br/>Engineering</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">✧</span>Artificial<br/>Intelligence</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">⬡</span>Algorithms &amp;<br/>Computational Geometry</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">↗</span>Innovation &amp;<br/>Emerging Technologies</div>
+</div>
 <div class="pdb-labs-actions">
-<a class="btn" href="https://www.instagram.com/pdb.labs/" target="_blank" rel="noopener noreferrer" aria-label="PDB Labs on Instagram">Instagram ↗</a>
-<a class="btn" href="https://www.tiktok.com/@pdb.labs" target="_blank" rel="noopener noreferrer" aria-label="PDB Labs on TikTok">TikTok ↗</a>
-</div></div></div></section>
+<a class="pdb-instagram" href="https://www.instagram.com/pdb.labs/" rel="noopener noreferrer" target="_blank">◎ Follow on Instagram ↗</a>
+<a class="pdb-tiktok" href="https://www.tiktok.com/@pdb.labs" rel="noopener noreferrer" target="_blank">♪ Follow on TikTok ↗</a>
+</div>
+</div>
+</div>
+</section>
 <section class="container contact reveal" id="contact">
 <div class="section-heading">
 <h2>
