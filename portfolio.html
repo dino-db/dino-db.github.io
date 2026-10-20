@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0b1020" name="theme-color"/>
+<title>Placido Di Blasi | Software Engineer &amp; Engineer</title>
+<style>
+   :root{color-scheme:dark;--bg:#0b1020;--text:#f2f5ff;--muted:#a7b0c7;--line:#ffffff1b;--accent:#86b6ff;--card:#ffffff0a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 80% 15%,#345fa74a,transparent 35%),radial-gradient(circle at 12% 60%,#4b3e9340,transparent 36%);pointer-events:none}
+    .glow{position:fixed;width:420px;height:420px;left:var(--x,60%);top:var(--y,30%);transform:translate(-50%,-50%);background:radial-gradient(circle,#7aabff16,transparent 68%);pointer-events:none;z-index:-1}
+    a{color:inherit;text-decoration:none}.container{width:min(1100px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:5;backdrop-filter:blur(20px);background:#0b1020b8;border-bottom:1px solid var(--line)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:1.12rem;font-weight:750;letter-spacing:-.04em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:28px;color:var(--muted);font-size:.92rem}.navlinks a:hover,.text-link:hover{color:var(--accent)}
+    .hero{min-height:calc(100svh - 74px);display:flex;align-items:center;padding:100px 0 115px;position:relative}.hero-content{max-width:800px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#c0d6ff;font-size:.86rem;letter-spacing:.13em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:#8fe2c2;box-shadow:0 0 16px #8fe2c2}h1{font-size:clamp(3.7rem,9vw,7.4rem);line-height:1.02;letter-spacing:-.075em;margin:22px 0 26px;font-weight:780}h1 span{background:linear-gradient(100deg,#f5f7ff 10%,#9bbdff 75%,#a2e8e1);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{font-size:clamp(1.12rem,2vw,1.35rem);color:var(--muted);max-width:620px;margin:0 0 34px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:13px 19px;font-weight:650;border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s}.btn:hover{transform:translateY(-3px);border-color:#a5c7ff}.btn.primary{background:#c3d8ff;color:#0c1831;border-color:transparent}.btn.primary:hover{background:#e0ebff}.scroll-note{position:absolute;bottom:45px;color:#7d8ba7;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+    section{padding:85px 0;scroll-margin-top:80px}.section-heading{display:flex;align-items:center;gap:16px;margin-bottom:32px}.section-heading h2{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.045em;margin:0}.section-heading::after{content:"";height:1px;flex:1;background:var(--line)}.about{font-size:1.15rem;color:var(--muted);max-width:780px}.about strong{color:var(--text);font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:27px;border:1px solid var(--line);background:var(--card);border-radius:18px;transition:transform .25s,border-color .25s,background .25s}.card:hover{transform:translateY(-6px);border-color:#86b6ff66;background:#ffffff10}.card .symbol{font-size:1.5rem;color:var(--accent);margin-bottom:20px}.card h3{margin:0 0 9px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.95rem}.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.tag{border:1px solid var(--line);background:#ffffff08;color:#cbd5ec;border-radius:999px;padding:7px 13px;font-size:.86rem}
+    .timeline{position:relative;margin:10px 0 0 8px;padding-left:30px;border-left:1px solid #86b6ff55}.timeline-item{position:relative;padding:0 0 34px}.timeline-item:last-child{padding-bottom:0}.timeline-item::before{content:"";position:absolute;left:-37px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px #86b6ff77}.meta{color:var(--accent);font-size:.85rem;font-weight:650;letter-spacing:.04em}.timeline h3{margin:7px 0 3px;font-size:1.2rem}.timeline p{margin:0;color:var(--muted);max-width:740px}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.project-card{display:flex;flex-direction:column;gap:13px;min-height:220px}.project-card h3{font-size:1.2rem;margin:0}.project-card p{flex:1}.project-link{color:#c0d6ff;font-weight:650;font-size:.9rem}.project-link:hover{color:white}.section-intro{color:var(--muted);max-width:690px;margin:-8px 0 25px}.contact{padding-bottom:115px}.contact p{color:var(--muted);font-size:1.1rem;max-width:600px}.text-link{color:#c0d6ff;font-weight:600}footer{border-top:1px solid var(--line);padding:24px 0;color:#8996b2;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:750px){.navlinks{gap:14px;font-size:.83rem}.hero{padding:90px 0 110px;min-height:80svh}.grid,.project-grid{grid-template-columns:1fr}.navlinks{gap:11px;flex-wrap:wrap;justify-content:flex-end}.brand{font-size:.94rem}nav{height:auto;min-height:74px;padding:12px 0}section{padding:62px 0}.card{padding:23px}.scroll-note{bottom:28px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}.glow{display:none}}
+  
+/* Hero introduction: compact AI-forward emphasis */
+.hero-focus{font-size:clamp(1.4rem,3vw,2.05rem);font-weight:750;letter-spacing:-.035em;line-height:1.25;margin:0 0 14px;background:linear-gradient(100deg,#f5f7ff,#a9baff 58%,#b28aff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-specialties{display:flex;flex-wrap:wrap;gap:8px;margin:-12px 0 30px}
+.hero-specialty{font-size:.79rem;font-weight:600;color:#c4d1f6;border:1px solid #8e99ef55;background:#8e99ef12;padding:6px 11px;border-radius:999px}
+@media(max-width:750px){.hero-focus{font-size:1.45rem}.hero-specialty{font-size:.73rem}}
+</style><meta content="Placido Di Blasi is an engineer and software engineer specializing in Python, computational geometry, CAD/CAE, virtual product development and AI-assisted software engineering." name="description"/><meta content="Placido Di Blasi" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="profile" property="og:type"/><meta content="Placido Di Blasi" property="og:site_name"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" property="og:title"/><meta content="Engineering, software development, computational geometry and AI. Explore the professional portfolio of Placido Di Blasi." property="og:description"/><meta content="https://placidodiblasi-engineer.dev/" property="og:url"/><meta content="Placido" property="profile:first_name"/><meta content="Di Blasi" property="profile:last_name"/><meta content="summary" name="twitter:card"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" name="twitter:title"/><meta content="Engineering, computational geometry, software development and AI." name="twitter:description"/><link href="https://placidodiblasi-engineer.dev/" rel="canonical"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://placidodiblasi-engineer.dev/#person",
+  "name": "Placido Di Blasi",
+  "givenName": "Placido",
+  "familyName": "Di Blasi",
+  "url": "https://placidodiblasi-engineer.dev/",
+  "jobTitle": "Software Engineer",
+  "description": "Engineer specializing in software development, computational geometry, CAD/CAE and AI-assisted engineering.",
+  "sameAs": [
+    "https://www.linkedin.com/in/placido-di-blasi-08367992",
+    "https://github.com/dino-db"
+  ],
+  "knowsAbout": [
+    "Software Engineering",
+    "Python",
+    "Computational Geometry",
+    "CAD/CAE",
+    "Artificial Intelligence",
+    "Virtual Product Development"
+  ]
+}</script>
+<link href="snake.css?v=5" rel="stylesheet"/><link href="/favicon.png" rel="icon" sizes="512x512" type="image/png"/></head>
+<body>
+<a href="index.html" style="position:fixed;left:14px;bottom:14px;z-index:999;background:#151d3a;color:#e9eaff;border:1px solid #6978bd;border-radius:999px;padding:9px 15px;text-decoration:none;font:600 12px system-ui">← Home</a>
+<div aria-hidden="true" class="glow">
+</div>
+<header>
+<nav aria-label="Main navigation" class="container">
+<a class="brand" href="#home">
+     Placido Di Blasi
+     <span>
+      .
+     </span>
+</a>
+<div class="navlinks">
+<a href="#about">
+      About
+     </a>
+<a href="#expertise">
+      Expertise
+     </a>
+<a href="#experience">
+      Experience
+     </a>
+<a href="#projects">
+      Projects
+     </a>
+<a href="#contact">
+      Contact
+     </a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero container" id="home">
+<div class="hero-content reveal">
+<div class="eyebrow">
+<span class="dot">
+</span>
+      Engineer · Senior Software Engineer
+     </div>
+<h1>
+      Hi, I'm
+      <span>
+       Placido Di Blasi.
+      </span>
+</h1>
+<p class="hero-focus">Engineering software. Building with AI.</p><p class="lead">Senior Software Engineer working at the intersection of computational geometry, CAD/CAE and artificial intelligence. I build engineering software and leverage AI-powered tools, coding agents and automated workflows to improve how complex software is developed.</p><div aria-label="Core areas of expertise" class="hero-specialties"><span class="hero-specialty">Software Engineering</span><span class="hero-specialty">Computational Geometry</span><span class="hero-specialty">AI &amp; Agentic Workflows</span></div>
+<div class="actions">
+<a class="btn primary" href="#projects">
+       Explore my work
+       <span aria-hidden="true">
+        ↗
+       </span>
+</a>
+<a class="btn" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">
+       GitHub
+       <span aria-hidden="true">
+        ↗
+       </span>
+</a>
+</div>
+</div>
+<div class="scroll-note">
+     Scroll to explore ↓
+    </div>
+</section><div class="arcade-embedded" id="arcade-overlay">
+<section aria-labelledby="arcade-title" class="arcade-panel" role="region">
+<div class="arcade-head"><div><h2 class="arcade-visually-hidden" id="arcade-title">Snake game</h2></div>
+</div>
+<div class="arcade-stats"><div class="arcade-stat"><span>Score</span><strong id="arcade-score">0</strong></div>
+<div class="arcade-stat"><span>Best</span><strong id="arcade-best">0</strong></div></div>
+<div class="arcade-stage"><canvas aria-label="Snake game board" height="400" id="snake-board" tabindex="0" width="400"></canvas>
+<div class="arcade-message" id="arcade-message"><div><strong id="arcade-message-title">SNAKE</strong><p id="arcade-message-text">Press Play to start</p></div></div></div>
+<div class="arcade-controls"><button class="arcade-action primary" id="arcade-play" type="button">Play / Restart</button>
+<button class="arcade-action" id="arcade-pause" type="button">Pause</button></div>
+<p class="arcade-help">Swipe to move · Arrow keys / WASD · Space to pause</p>
+</section>
+</div>
+<section class="container reveal" id="about">
+<div class="section-heading">
+<h2>
+      About me
+     </h2>
+</div>
+<p class="about">
+     I'm
+     <strong>
+      Placido Di Blasi
+     </strong>
+     , an engineer and Senior Software Engineer with a background in
+     <strong>
+      Space and Astronautical Engineering
+     </strong>
+     . I work on complex software challenges, combining
+     <strong>
+      Python, geometry, simulation and modern development practices
+     </strong>
+     to turn technical ideas into reliable solutions.
+    </p>
+</section>
+<section class="container reveal" id="expertise">
+<div class="section-heading">
+<h2>
+      What I do
+     </h2>
+</div>
+<div class="grid">
+<article class="card">
+<div aria-hidden="true" class="symbol">
+       ⌘
+      </div>
+<h3>
+       Software Engineering
+      </h3>
+<p>
+       Designing and developing maintainable applications, tools and engineering workflows.
+      </p>
+</article>
+<article class="card">
+<div aria-hidden="true" class="symbol">
+       ◇
+      </div>
+<h3>
+       Computational Geometry
+      </h3>
+<p>
+       Solving geometric and numerical problems for complex engineering applications.
+      </p>
+</article>
+<article class="card">
+<div aria-hidden="true" class="symbol">
+       ✳
+      </div>
+<h3>
+       AI-Assisted Development
+      </h3>
+<p>
+       Exploring intelligent tools and workflows to improve software development.
+      </p>
+</article>
+</div>
+<div aria-label="Skills" class="tags">
+<span class="tag">
+      Python
+     </span>
+<span class="tag">
+      JavaScript
+     </span>
+<span class="tag">
+      React
+     </span>
+<span class="tag">
+      Computational Geometry
+     </span>
+<span class="tag">
+      CAD / CAE
+     </span>
+<span class="tag">
+      AI Tools
+     </span>
+</div>
+</section>
+<section class="container reveal" id="experience">
+<div class="section-heading">
+<h2>
+      Experience &amp; education
+     </h2>
+</div>
+<div class="timeline">
+<article class="timeline-item">
+<div class="meta">
+       2020 — Present · Bridgestone EMIA
+      </div>
+<h3>
+       Senior Software Engineer
+      </h3>
+<p>
+       Engineering software, computational geometry and virtual product development. Building tools that connect complex engineering requirements with practical software solutions.
+      </p>
+</article>
+<article class="timeline-item">
+<div class="meta">
+       Sapienza University of Rome
+      </div>
+<h3>
+       MSc · Space and Astronautical Engineering
+      </h3>
+<p>
+       An engineering foundation in numerical methods, complex systems and analytical problem-solving.
+      </p>
+</article>
+<article class="timeline-item">
+<div class="meta">
+       Continuing education
+      </div>
+<h3>
+       Stanford &amp; HKUST
+      </h3>
+<p>
+       Specializations in Algorithms (Stanford) and Software Engineering (HKUST).
+      </p>
+</article>
+</div>
+</section>
+<section class="container reveal" id="projects">
+<div class="section-heading">
+<h2>
+      Selected work
+     </h2>
+</div>
+<p class="section-intro">
+     A look at my public development work and the areas I focus on. Explore GitHub for current repositories and updates.
+    </p>
+<div class="project-grid">
+<article class="card project-card">
+<div aria-hidden="true" class="symbol">
+       &lt;/&gt;
+      </div>
+<h3>
+       Open-source projects
+      </h3>
+<p>
+       Code, experiments and developer tooling shared through my public GitHub profile.
+      </p>
+<a class="project-link" href="https://github.com/dino-db?tab=repositories" rel="noopener noreferrer" target="_blank">
+       Browse repositories ↗
+      </a>
+</article>
+<article class="card project-card">
+<div aria-hidden="true" class="symbol">
+       ✦
+      </div>
+<h3>
+       Engineering &amp; AI
+      </h3>
+<p>
+       My areas of interest include computational geometry, engineering applications and AI-assisted development workflows.
+      </p>
+<a class="project-link" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">
+       Explore GitHub ↗
+      </a>
+</article>
+</div>
+</section>
+<section class="container contact reveal" id="contact">
+<div class="section-heading">
+<h2>
+      Let's connect
+     </h2>
+</div>
+<p>
+     Interested in software engineering, technical challenges or collaboration? Reach out by email or connect with me on LinkedIn.
+    </p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
+<a class="btn primary" href="mailto:ing.placidodiblasi@gmail.com">Email me ↗</a>
+<a class="btn" href="https://www.linkedin.com/in/placido-di-blasi-08367992" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+<a class="btn" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+</div>
+<p style="margin-top:18px;font-size:.95rem"><a class="text-link" href="mailto:ing.placidodiblasi@gmail.com">ing.placidodiblasi@gmail.com</a></p>
+</section>
+</main>
+<footer>
+<div class="container foot">
+<span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     Placido Di Blasi
+    </span>
+<span>
+     Engineered with curiosity.
+    </span>
+</div>
+</footer>
+<script>
+   document.getElementById('year').textContent = new Date().getFullYear();
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, {threshold: .08});
+      items.forEach(item => observer.observe(item));
+    } else { items.forEach(item => item.classList.add('visible')); }
+    if (window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches) {
+      document.addEventListener('pointermove', e => { document.documentElement.style.setProperty('--x', e.clientX + 'px'); document.documentElement.style.setProperty('--y', e.clientY + 'px'); }, {passive:true});
+    }
+  </script>
+<script defer="True" src="snake.js?v=5"></script></body>
+</html>
