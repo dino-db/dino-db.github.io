@@ -54,3 +54,7 @@ body.insights-page { background:#0b1020; color:#f2f5ff; }
  .article-page .article-card {gap:24px}
  .article-page .slide-visual {padding:10px}
 }
+
+/* No oversized brand marks on Insights and article pages. */
+.insights-page .hero h1,.insights-page .hero p {max-width:800px;}
+.article-page .article-hero {padding-right:0;}
