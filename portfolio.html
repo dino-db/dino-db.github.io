@@ -58,6 +58,7 @@
 .pdb-labs-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
 .pdb-labs-actions a { display:inline-flex; justify-content:center; align-items:center; gap:9px; padding:12px 17px; border-radius:12px; font-weight:700; border:1px solid #747cdb88; transition:transform .2s,border-color .2s; }
 .pdb-labs-actions a:hover { transform:translateY(-2px); border-color:#bba4ff; }
+.pdb-labs-actions .pdb-insights { background:#f5f7ff;color:#122347;border-color:#b7caff; }
 .pdb-labs-actions .pdb-instagram { background:linear-gradient(105deg,#086cf4,#8c28e9); color:white; border-color:transparent; }
 .pdb-labs-actions .pdb-tiktok { background:#10162b; color:white; }
 @media(max-width:760px) {
@@ -73,33 +74,6 @@
   .pdb-labs-actions { flex-direction:column; }
   .pdb-labs-actions a { width:100%; }
 }
-
-/* PDB Labs social icons and screenshot-matched contact layout */
-.pdb-labs-actions a svg{width:20px;height:20px;flex:none;display:block}
-.contact{padding-top:65px;padding-bottom:90px}
-.contact .section-heading{margin-bottom:18px}
-.contact .section-heading h2{font-size:.78rem;letter-spacing:.19em;text-transform:uppercase;color:#a58cff;font-weight:750}
-.contact-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr);gap:28px;align-items:start}
-.contact-headline{font-size:clamp(1.55rem,2.9vw,2.1rem);line-height:1.22;font-weight:750;letter-spacing:-.035em;margin:0 0 13px}
-.contact-headline span{background:linear-gradient(95deg,#2b8cff,#e02bdf);background-clip:text;-webkit-background-clip:text;color:transparent}
-.contact .contact-subtitle{font-size:.99rem;line-height:1.6;color:#b9c4e1;margin:0}
-.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.contact-card{display:flex;flex-direction:column;min-width:0;min-height:116px;padding:17px 16px;border:1px solid #54509d48;border-radius:13px;background:linear-gradient(135deg,#10132d,#1a1430);transition:border-color .2s,transform .2s}
-.contact-card:hover{border-color:#a27dff;transform:translateY(-2px)}
-.contact-card svg{width:26px;height:26px;color:#8d69ff;margin-bottom:13px}
-.contact-card strong{font-size:.89rem;color:#fff;margin-bottom:4px}
-.contact-card small{font-size:.7rem;color:#c1c8df;overflow-wrap:anywhere;line-height:1.4}
-.contact-card small span{color:#85baff}
-@media(max-width:760px){.contact-layout{grid-template-columns:1fr;gap:22px}.contact-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.contact-card{padding:13px 10px}}
-@media(max-width:460px){.contact-cards{grid-template-columns:1fr}.contact-card{min-height:0;display:grid;grid-template-columns:34px 1fr;column-gap:12px;align-items:center}.contact-card svg{grid-row:span 2;margin:0}.contact-card strong{margin:0}}
-
-/* PDB Labs reference-matched topic icons */
-#pdb-labs .pdb-labs-topic span { display:flex; justify-content:center; align-items:center; height:48px; margin-bottom:8px; color:#875cff; }
-#pdb-labs .pdb-labs-topic:nth-child(1) span { color:#248dff; }
-#pdb-labs .pdb-labs-topic:nth-child(2) span { color:#784bff; }
-#pdb-labs .pdb-labs-topic:nth-child(3) span { color:#9852ff; }
-#pdb-labs .pdb-labs-topic:nth-child(4) span { color:#b12cff; }
-#pdb-labs .pdb-labs-topic span svg { width:40px; height:40px; display:block; }
 </style><meta content="Placido Di Blasi is an engineer and software engineer specializing in Python, computational geometry, CAD/CAE, virtual product development and AI-assisted software engineering." name="description"/><meta content="Placido Di Blasi" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="profile" property="og:type"/><meta content="Placido Di Blasi" property="og:site_name"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" property="og:title"/><meta content="Engineering, software development, computational geometry and AI. Explore the professional portfolio of Placido Di Blasi." property="og:description"/><meta content="https://placidodiblasi-engineer.dev/" property="og:url"/><meta content="Placido" property="profile:first_name"/><meta content="Di Blasi" property="profile:last_name"/><meta content="summary" name="twitter:card"/><meta content="Placido Di Blasi | Software Engineer &amp; Engineer" name="twitter:title"/><meta content="Engineering, computational geometry, software development and AI." name="twitter:description"/><link href="https://placidodiblasi-engineer.dev/" rel="canonical"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Person",
@@ -152,6 +126,7 @@
 <a href="#contact">
       Contact
      </a>
+<a href="insights.html">Insights</a>
 </div>
 </nav>
 </header>
@@ -378,27 +353,35 @@
 <h3>Engineering the Future</h3>
 <p>Explore AI, coding, algorithms and emerging technologies through short-form content and engineering insights.</p>
 <div aria-label="PDB Labs topics" class="pdb-labs-topics">
-<div class="pdb-labs-topic"><span aria-hidden="true"><svg aria-hidden="true" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M16 12 5 24l11 12M32 12l11 12-11 12M28 8 20 40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path></svg></span>Software<br/>Engineering</div>
-<div class="pdb-labs-topic"><span aria-hidden="true"><svg aria-hidden="true" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 9c-7-8-17-2-15 7-7 4-5 13 1 15-2 8 8 13 14 7 6 6 16 1 14-7 6-2 8-11 1-15 2-9-8-15-15-7Z" stroke="currentColor" stroke-width="2.6"></path><path d="M24 9v29M18 14c-6 1-6 9 0 11-6 2-5 9 1 10M30 14c6 1 6 9 0 11 6 2 5 9-1 10M14 21l5 4M34 21l-5 4M19 31l5-4 5 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3"></path></svg></span>Artificial<br/>Intelligence</div>
-<div class="pdb-labs-topic"><span aria-hidden="true"><svg aria-hidden="true" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 43 14v20L24 45 5 34V14L24 3ZM24 3v42M5 14l19 12 19-12M5 34l19-12 19 12" stroke="currentColor" stroke-linejoin="round" stroke-width="2.6"></path></svg></span>Algorithms &amp;<br/>Computational Geometry</div>
-<div class="pdb-labs-topic"><span aria-hidden="true"><svg aria-hidden="true" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M19 31c-5-2-9 0-12 7 7-1 10-5 10-9M18 29 11 22l8-6c6-9 14-12 24-11-1 10-5 18-14 24l-6 8-5-8Z" stroke="currentColor" stroke-linejoin="round" stroke-width="2.6"></path><circle cx="31" cy="17" r="4" stroke="currentColor" stroke-width="2.6"></circle><path d="m16 35-5 6M9 31l-5 5" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"></path></svg></span>Innovation &amp;<br/>Emerging Technologies</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">⌘</span>Software<br/>Engineering</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">✧</span>Artificial<br/>Intelligence</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">⬡</span>Algorithms &amp;<br/>Computational Geometry</div>
+<div class="pdb-labs-topic"><span aria-hidden="true">↗</span>Innovation &amp;<br/>Emerging Technologies</div>
 </div>
 <div class="pdb-labs-actions">
-<a class="pdb-instagram" href="https://www.instagram.com/pdb.labs/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".9" stroke="none"></circle></svg> Follow on Instagram ↗</a>
-<a class="pdb-tiktok" href="https://www.tiktok.com/@pdb.labs" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M16.7 2h-3.4v13.4a3.1 3.1 0 1 1-2.6-3.05V8.9a6.55 6.55 0 1 0 6 6.5V8.1a8.5 8.5 0 0 0 5 1.6V6.3a5.1 5.1 0 0 1-5-4.3Z"></path></svg> Follow on TikTok ↗</a>
+<a class="pdb-insights" href="insights.html">✦ Explore Insights →</a>
+<a class="pdb-instagram" href="https://www.instagram.com/pdb.labs/" rel="noopener noreferrer" target="_blank">◎ Follow on Instagram ↗</a>
+<a class="pdb-tiktok" href="https://www.tiktok.com/@pdb.labs" rel="noopener noreferrer" target="_blank">♪ Follow on TikTok ↗</a>
 </div>
 </div>
 </div>
 </section>
-<section class="container contact reveal" id="contact"><div class="section-heading"><h2>Let's connect</h2></div>
-<div class="contact-layout">
-<div><h3 class="contact-headline">Interested in software engineering, technical challenges or <span>collaboration?</span></h3><p class="contact-subtitle">Reach out by email or connect with me on LinkedIn.</p></div>
-<div class="contact-cards">
-<a class="contact-card" href="mailto:ing.placidodiblasi@gmail.com"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m3 6 9 7 9-7"></path></svg><strong>Email</strong><small>ing.placidodiblasi@gmail.com <span>↗</span></small></a>
-<a class="contact-card" href="https://www.linkedin.com/in/placido-di-blasi-08367992" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6ZM8 19H5V9h3v10ZM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-5c0-1.2-.1-2.6-1.8-2.6s-2 1.3-2 2.5V19h-3V9h2.9v1.4h.1c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.9 2 3.9 4.6V19Z"></path></svg><strong>LinkedIn</strong><small>Connect with me <span>↗</span></small></a>
-<a class="contact-card" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.72c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.35 1.08 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.6 9.6 0 0 1 12 6.64c.85 0 1.7.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.35 4.68-4.59 4.93.36.31.69.92.69 1.86v2.93c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg><strong>GitHub</strong><small>View my projects <span>↗</span></small></a>
+<section class="container contact reveal" id="contact">
+<div class="section-heading">
+<h2>
+      Let's connect
+     </h2>
 </div>
-</div></section>
+<p>
+     Interested in software engineering, technical challenges or collaboration? Reach out by email or connect with me on LinkedIn.
+    </p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
+<a class="btn primary" href="mailto:ing.placidodiblasi@gmail.com">Email me ↗</a>
+<a class="btn" href="https://www.linkedin.com/in/placido-di-blasi-08367992" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+<a class="btn" href="https://github.com/dino-db" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+</div>
+<p style="margin-top:18px;font-size:.95rem"><a class="text-link" href="mailto:ing.placidodiblasi@gmail.com">ing.placidodiblasi@gmail.com</a></p>
+</section>
 </main>
 <footer>
 <div class="container foot">
