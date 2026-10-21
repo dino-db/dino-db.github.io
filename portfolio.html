@@ -422,6 +422,19 @@
 </div>
 </footer>
 <script>
+
+    // Support direct section links from services that may discard URL fragments.
+    const linkedSection = new URLSearchParams(window.location.search).get('section');
+    if (linkedSection && !window.location.hash) {
+      const targetSection = document.getElementById(linkedSection);
+      if (targetSection && targetSection.tagName === 'SECTION') {
+        window.addEventListener('load', () => {
+          targetSection.classList.add('visible');
+          targetSection.scrollIntoView({behavior: 'instant', block: 'start'});
+        }, {once: true});
+      }
+    }
+
    document.getElementById('year').textContent = new Date().getFullYear();
     const items = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
